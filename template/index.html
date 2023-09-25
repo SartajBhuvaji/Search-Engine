@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Corpora Search</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+        margin: 0;
+      }
+      #search-container {
+        margin-top: -300px;
+        display: flex;
+        justify-content: center;
+      }
+      input[type="text"] {
+        width: 500px;
+        height: 20px;
+        font-size: 16px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 24px;
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+        background-color: #fff;
+        margin-right: 16px;
+        transition: box-shadow 0.3s;
+      }
+      input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(66,133,244,0.25);
+      }
+      input[type="submit"] {
+        width: 65px;
+        height: 44px;
+        font-size: 16px;
+        color: #000000;
+        background-color: #e9eaebf3;
+        border: none;
+        border-radius: 24px;
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+      }
+      input[type="submit"]:hover {
+        background-color: #3367d6;
+      }
+
+      #logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+      }
+      #logo img {
+        width: 400px;
+      }
+
+      /* CSS code for footer */
+      footer {
+        font-family: 'Google Sans', sans-serif;
+        background-color: #f2f2f2;
+        padding: 0px;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div id="logo">
+      <img src="..\images\logo.png" alt="Corpora Search Logo">
+    </div>
+    <div id="search-container">
+      <form method="POST">
+        <input type="text" name="text_input" placeholder="Search Corpora . .">
+        <input type="submit" value="Go">
+      </form>
+    </div>
+    
+    {% if text_output %}
+      <h2>{{ text_output }}</h2>
+    {% endif %}
+
+    <footer>
+      Big Data Lab 5: Search Engine By Sartaj Bhuvaji
+    </footer>
+  </body>
+</html>
